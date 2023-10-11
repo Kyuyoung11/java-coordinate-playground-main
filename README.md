@@ -1,3 +1,8 @@
+## 기능목록 (선 길이)
+1. 좌표입력받기
+2. 선 길이 계산 후 출력
+
+---
 ## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
 
 ---
