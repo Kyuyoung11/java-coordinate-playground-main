@@ -1,20 +1,20 @@
 package coordinate.domains;
 
 public class Point {
-    private final int x;
-    private final int y;
+    private final Value x;
+    private final Value y;
 
     public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.x = new Value(x);
+        this.y = new Value(y);
     }
 
-    public int getX() {
-        return this.x;
+    public int getXValue() {
+        return this.x.getValue();
     }
 
-    public int getY() {
-        return this.y;
+    public int getYValue() {
+        return this.y.getValue();
     }
 
     @Override

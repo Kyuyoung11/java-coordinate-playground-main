@@ -9,7 +9,7 @@ public class PointTest {
     @Test
     void Point_생성자() {
         Point p = new Point(1,2);
-        assertEquals(p.getX(), 1);
-        assertEquals(p.getY(), 2);
+        assertEquals(p.getXValue(), 1);
+        assertEquals(p.getYValue(), 2);
     }
 }
