@@ -19,6 +19,10 @@ public class Value {
         }
     }
 
+    public boolean isEqualValue(int value) {
+        return value == this.value;
+    }
+
     public int getValue() {
         return this.value;
     }

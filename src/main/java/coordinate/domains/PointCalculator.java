@@ -18,12 +18,7 @@ public class PointCalculator {
     }
 
     private List<Point> _makePoints(String coordinate) {
-
-        List<String> pointList = ParsingUtils.convertToPointList(coordinate);
-
-        return pointList.stream()
-                .map(point->ParsingUtils.convertToPoint())
-                .collect(Collectors.toList());
+        return ParsingUtils.convertToPointList(coordinate);
     }
 
     public double calcDistance() {
