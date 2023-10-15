@@ -2,15 +2,24 @@ package coordinate.utils;
 
 import coordinate.domains.Point;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParsingUtils {
     public static List<Point> convertToPointList(String coordinate) {
-        //1. - 기준으로 split
-        //2.
-        return null;
+        List<Point> pointList = new ArrayList<>();
+
+        //1. "-" 기준으로 split
+        String[] pointStrings = coordinate.split("-");
+
+        //2. point 문자열 -> Point 객체 생성
+        for (String point : pointStrings) {
+            pointList.add(convertToPoint(point));
+        }
+
+        return pointList;
     }
 
     public static Point convertToPoint(String point) {
