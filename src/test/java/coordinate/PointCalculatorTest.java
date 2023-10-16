@@ -2,7 +2,7 @@ package coordinate;
 
 import coordinate.domains.Point;
 import coordinate.domains.PointCalculator;
-import coordinate.domains.Points;
+import coordinate.domains.Shape;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +20,8 @@ public class PointCalculatorTest {
         Point p2 = new Point(2,2);
 
 
-        pointCalculator = new PointCalculator(new Points(Arrays.asList(p1,p2)));
+        //TODO
+//        pointCalculator = new PointCalculator(new Shape(Arrays.asList(p1,p2)));
     }
 
     @Test
