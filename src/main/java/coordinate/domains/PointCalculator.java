@@ -5,14 +5,19 @@ import coordinate.utils.ParsingUtils;
 import java.util.List;
 
 public class PointCalculator {
-    private Points points;
+    private Shape shape;
 
     public PointCalculator(String coordinate){
-        this.points = new Points(_makePoints(coordinate));
+        this.shape = createShape(_makePoints(coordinate));
     }
 
-    public PointCalculator(Points points) {
-        this.points = points;
+    //TODO
+    public Shape createShape(List<Point> points) {
+        return null;
+    }
+
+    public PointCalculator(Shape shape) {
+        this.shape = shape;
     }
 
     private List<Point> _makePoints(String coordinate) {
@@ -20,6 +25,6 @@ public class PointCalculator {
     }
 
     public double calcDistance() {
-        return points.calcDistance();
+        return this.shape.calculateArea();
     }
 }
