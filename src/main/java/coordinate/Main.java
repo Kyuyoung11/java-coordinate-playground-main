@@ -10,5 +10,8 @@ public class Main {
 
         //2.좌표계산기 생성
         PointCalculator pointCalculator = new PointCalculator(coordinateInput);
+
+        //3.계산
+        pointCalculator.calcDistance();
     }
 }

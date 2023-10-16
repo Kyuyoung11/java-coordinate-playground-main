@@ -17,7 +17,7 @@ public class PointCalculatorTest {
     void setUp() {
 
         Point p1 = new Point(1,1);
-        Point p2 = new Point(1,2);
+        Point p2 = new Point(2,2);
 
 
         pointCalculator = new PointCalculator(new Points(Arrays.asList(p1,p2)));
@@ -33,7 +33,7 @@ public class PointCalculatorTest {
     @Test
     void 길이계산_테스트() {
 
-        double distance = Math.round(pointCalculator.calcDistance());
+        double distance = pointCalculator.calcDistance();
         System.out.println(distance);
         assertEquals(Math.round(distance), 1);
     }
