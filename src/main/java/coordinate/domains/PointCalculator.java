@@ -2,9 +2,7 @@ package coordinate.domains;
 
 import coordinate.utils.ParsingUtils;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PointCalculator {
     private Points points;
@@ -22,9 +20,6 @@ public class PointCalculator {
     }
 
     public double calcDistance() {
-        return 0;
-//        if (this.points.getPointsSize() == 2) {
-//            return Math.sqrt(Math.pow(p1.getXValue() - p2.getXValue(), 2) + Math.pow(p1.getYValue() - p2.getYValue(), 2));
-//        }
+        return points.calcDistance();
     }
 }
