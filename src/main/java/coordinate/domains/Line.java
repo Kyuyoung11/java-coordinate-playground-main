@@ -1,5 +1,8 @@
 package coordinate.domains;
 
+import coordinate.utils.CalculationUtils;
+import coordinate.utils.ValidationUtils;
+
 import java.util.List;
 
 public class Line implements Shape {
@@ -12,15 +15,11 @@ public class Line implements Shape {
     }
 
     private void _validate(List<Point> points) {
-        if (points.size() != SIZE) {
-            throw new IllegalArgumentException("점의 개수가 올바르지 않습니다.");
-        }
+        ValidationUtils.validateSize(points.size(), SIZE);
     }
 
     @Override
     public double calculateArea() {
-        Point p1 = points.get(0);
-        Point p2 = points.get(1);
-        return Math.sqrt(Math.pow(p1.getXValue() - p2.getXValue(), 2) + Math.pow(p1.getYValue() - p2.getYValue(), 2));
+        return CalculationUtils.calculateDistance(points.get(0), points.get(1));
     }
 }
