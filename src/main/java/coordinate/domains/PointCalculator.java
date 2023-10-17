@@ -8,12 +8,13 @@ public class PointCalculator {
     private Shape shape;
 
     public PointCalculator(String coordinate){
-        this.shape = createShape(_makePoints(coordinate));
+        ShapeFactory shapeFactory = new ShapeFactory();
+        this.shape = shapeFactory.newInstance(_makePoints(coordinate));
     }
 
-    //TODO
-    public Shape createShape(List<Point> points) {
-        return null;
+    public PointCalculator(List<Point> points){
+        ShapeFactory shapeFactory = new ShapeFactory();
+        this.shape = shapeFactory.newInstance(points);
     }
 
     public PointCalculator(Shape shape) {
@@ -24,7 +25,7 @@ public class PointCalculator {
         return ParsingUtils.convertToPointList(coordinate);
     }
 
-    public double calcDistance() {
+    public double calculateArea() {
         return this.shape.calculateArea();
     }
 }
