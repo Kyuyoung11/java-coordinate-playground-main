@@ -20,13 +20,12 @@ public class PointCalculatorTest {
         Point p2 = new Point(2,2);
 
 
-        //TODO
-//        pointCalculator = new PointCalculator(new Shape(Arrays.asList(p1,p2)));
+        pointCalculator = new PointCalculator(Arrays.asList(p1,p2));
     }
 
     @Test
     void String생성자_테스트() {
-        pointCalculator = new PointCalculator("(10,10)-(14,15)");
+        this.pointCalculator = new PointCalculator("(10,10)-(14,15)");
     }
 
 
@@ -34,7 +33,7 @@ public class PointCalculatorTest {
     @Test
     void 길이계산_테스트() {
 
-        double distance = pointCalculator.calcDistance();
+        double distance = this.pointCalculator.calculateArea();
         System.out.println(distance);
         assertEquals(Math.round(distance), 1);
     }
