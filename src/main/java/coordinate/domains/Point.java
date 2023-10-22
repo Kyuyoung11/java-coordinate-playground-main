@@ -21,6 +21,10 @@ public class Point {
         return this.x.isEqualValue(x) && this.y.isEqualValue(y);
     }
 
+    public boolean isEqualsPoint(Point point) {
+        return this.x.isEqualValue(point.getXValue()) && this.y.isEqualValue(point.getYValue());
+    }
+
     @Override
     public String toString() {
         return "Point{" +
