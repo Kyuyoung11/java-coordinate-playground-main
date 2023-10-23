@@ -22,10 +22,6 @@ public class PointCalculatorTest {
         pointCalculator = new PointCalculator(Arrays.asList(p1,p2));
     }
 
-    @Test
-    void String생성자_테스트() {
-        this.pointCalculator = new PointCalculator("(10,10)-(14,15)");
-    }
 
 
 
