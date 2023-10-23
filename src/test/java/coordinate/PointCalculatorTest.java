@@ -2,7 +2,6 @@ package coordinate;
 
 import coordinate.domains.Point;
 import coordinate.domains.PointCalculator;
-import coordinate.domains.Shape;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
