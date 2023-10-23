@@ -1,10 +1,8 @@
 package coordinate.domains;
 
-import coordinate.utils.SortingUtils;
 import coordinate.utils.ValidationUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -83,5 +81,10 @@ public class Rectangle implements Shape{
     private int _calculateHeight(List<Point> points) {
         ArrayList<Integer> yValues = new ArrayList<>(_makeUniqueYValues(points));
         return Math.abs(yValues.get(0)-yValues.get(1));
+    }
+
+    @Override
+    public void printArea() {
+        System.out.println("사각형 넓이는 "+ (int)calculateArea());
     }
 }
