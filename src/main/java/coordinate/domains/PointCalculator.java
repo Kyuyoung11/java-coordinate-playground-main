@@ -28,4 +28,8 @@ public class PointCalculator {
     public double calculateArea() {
         return this.shape.calculateArea();
     }
+
+    public void printArea() {
+        shape.printArea();
+    }
 }

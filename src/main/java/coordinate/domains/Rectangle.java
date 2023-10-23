@@ -1,9 +1,8 @@
 package coordinate.domains;
 
-import coordinate.utils.SortingUtils;
 import coordinate.utils.ValidationUtils;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -12,6 +11,7 @@ public class Rectangle implements Shape{
     private final int SIZE = 4;
     private final int UNIQUE_VALUE_SIZE = 2;
     private final List<Point> points;
+
 
     public Rectangle(List<Point> points) {
         _validate(points);
@@ -29,6 +29,13 @@ public class Rectangle implements Shape{
 
     }
 
+
+    /**
+     * TODO 고민 내용
+     * 1. Set<Integer>를 멤버변수로 올려도 되는건지
+     * 2. 메소드만 다르고 로직순서는 같은데 이건 리팩토링 못하는건지
+     * @param points
+     */
     private void _validateRectangle(List<Point> points) {
 
         Set<Integer> xValues = _makeUniqueXValues(points);
@@ -58,6 +65,26 @@ public class Rectangle implements Shape{
 
     @Override
     public double calculateArea() {
-        return 0;
+        int width = _calculateWidth(points);
+        int height = _calculateHeight(points);
+        return width * height;
+    }
+
+
+
+    private int _calculateWidth(List<Point> points) {
+
+        ArrayList<Integer> xValues = new ArrayList<>(_makeUniqueXValues(points));
+        return Math.abs(xValues.get(0)-xValues.get(1));
+    }
+
+    private int _calculateHeight(List<Point> points) {
+        ArrayList<Integer> yValues = new ArrayList<>(_makeUniqueYValues(points));
+        return Math.abs(yValues.get(0)-yValues.get(1));
+    }
+
+    @Override
+    public void printArea() {
+        System.out.println("사각형 넓이는 "+ (int)calculateArea());
     }
 }

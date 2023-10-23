@@ -37,4 +37,17 @@ public class PointCalculatorTest {
         assertEquals(Math.round(distance), 1);
     }
 
+    @Test
+    void 직사각형생성자_테스트() {
+        Point p1 = new Point(6,2);
+        Point p2 = new Point(2,2);
+        Point p3 = new Point(6,4);
+        Point p4 = new Point (2,4);
+
+
+        pointCalculator = new PointCalculator(Arrays.asList(p1,p2,p3,p4));
+        assertEquals(pointCalculator.calculateArea(), 8);
+
+    }
+
 }

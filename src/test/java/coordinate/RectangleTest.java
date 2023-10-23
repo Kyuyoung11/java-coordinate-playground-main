@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RectangleTest {
     List<Point> pointList;
@@ -17,9 +18,9 @@ public class RectangleTest {
     @BeforeEach
     void setUp() {
 
-        p1 = new Point(1,2);
+        p1 = new Point(6,2);
         p2 = new Point(2,2);
-        p3 = new Point(1,4);
+        p3 = new Point(6,4);
         p4 = new Point (2,4);
 
         pointList = Arrays.asList(p1,p2,p3,p4);
@@ -45,5 +46,11 @@ public class RectangleTest {
         pointList = Arrays.asList(p1,p2,p3,p4);
 
         assertThatThrownBy(()->new Rectangle(pointList)).hasMessageContaining("직사각형이 아닙니다");
+    }
+
+    @Test
+    void 면적계산() {
+        Rectangle rectangle = new Rectangle(pointList);
+        assertEquals(rectangle.calculateArea(),8);
     }
 }
