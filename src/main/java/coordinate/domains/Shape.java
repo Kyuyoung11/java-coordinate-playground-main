@@ -1,5 +1,7 @@
 package coordinate.domains;
 
 public interface Shape {
-    public double calculateArea();
+    double calculateArea();
+
+    void printArea();
 }

@@ -22,4 +22,9 @@ public class Line implements Shape {
     public double calculateArea() {
         return CalculationUtils.calculateDistance(points.get(0), points.get(1));
     }
+
+    @Override
+    public void printArea() {
+        System.out.printf("두 점 사이 거리는 %.6f%n", calculateArea());
+    }
 }
