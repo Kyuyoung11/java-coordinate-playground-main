@@ -28,8 +28,8 @@ public class Point {
     @Override
     public String toString() {
         return "Point{" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + x.getValue() +
+                ", y=" + y.getValue() +
                 '}';
     }
 }
