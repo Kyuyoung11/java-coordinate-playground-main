@@ -1,3 +1,5 @@
+package coordinate_feedback;
+
 import java.util.List;
 
 public class Rectangle extends AbstractFigure {

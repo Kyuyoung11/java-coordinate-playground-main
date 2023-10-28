@@ -1,3 +1,6 @@
+package coordinate_feedback;
+
+
 import java.util.List;
 
 public interface FigureCreator {

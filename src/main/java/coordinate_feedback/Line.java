@@ -1,20 +1,23 @@
+package coordinate_feedback;
+
+
 import java.util.List;
 
-public class Triangle extends AbstractFigure {
-    public static final int TRIANGLE_POINT_SIZE = 3;
+public class Line extends AbstractFigure {
+    public static final int LINE_POINT_SIZE = 2;
 
-    public Triangle(List<Point> points) {
+    public Line(List<Point> points) {
         super(points);
     }
 
     @Override
     public int size() {
-        return TRIANGLE_POINT_SIZE;
+        return LINE_POINT_SIZE;
     }
 
     @Override
     public String getName() {
-        return "삼각형";
+        return "선";
     }
 
     @Override
