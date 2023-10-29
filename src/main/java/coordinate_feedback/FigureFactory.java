@@ -1,23 +1,16 @@
 package coordinate_feedback;
 
 
-
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.function.Supplier;
 
 public class FigureFactory {
-    private static Map<Integer, Supplier<Figure>> figures;
+
+    private final static FigureCreatorImpl figureCreator = new FigureCreatorImpl();
 
     static Figure getInstance(List<Point> points) {
-        figures = new HashMap<>();
-        figures.put(2, (Supplier<Figure>) new Line(points));
-        figures.put(3, (Supplier<Figure>) new Triangle(points));
-        figures.put(4, (Supplier<Figure>) new Rectangle(points));
 
         try {
-            return figures.get(points.size()).get();
+            return figureCreator.create(points);
         } catch(NullPointerException e) {
             throw new IllegalArgumentException("유효하지 않은 도형입니다.");
         }
